@@ -1,1 +1,1 @@
-### assignment for FreeCodeCamp invloving a javascript calculator
+### assignment for FreeCodeCamp involving a javascript calculator
