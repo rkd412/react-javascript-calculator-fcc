@@ -1,1 +1,1 @@
-### assignment for FreeCodeCamp involving a javascript calculator
+### Assignment for FreeCodeCamp involving a javascript calculator. Just a start before moving it to Codepen to be finished and graded because it is easier to begin on my local IDE.
