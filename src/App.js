@@ -7,6 +7,6 @@ function App() {
       <Calc />
     </div>
   );
-};
+}
 
 export default App;

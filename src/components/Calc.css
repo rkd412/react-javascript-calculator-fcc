@@ -1,0 +1,75 @@
+.container {
+  background: blue;
+  width: 800px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "a a a a"
+    "b b c d"
+    "e f g h"
+    "i j k l"
+    "m n o p"
+    "q q r p";
+}
+
+.button {
+  background: red;
+  border: 5px solid green;
+}
+
+#display {
+  grid-area: a;
+}
+#clear {
+  grid-area: b;
+}
+#divide {
+  grid-area: c;
+}
+#multiply {
+  grid-area: d;
+}
+#seven {
+  grid-area: e;
+}
+#eight {
+  grid-area: f;
+}
+#nine {
+  grid-area: g;
+}
+#subtract {
+  grid-area: h;
+}
+#four {
+  grid-area: i;
+}
+#five {
+  grid-area: j;
+}
+#six {
+  grid-area: k;
+}
+#add {
+  grid-area: l;
+}
+#one {
+  grid-area: m;
+}
+#two {
+  grid-area: n;
+}
+#three {
+  grid-area: o;
+}
+#equals {
+  grid-area: p;
+}
+#zero {
+  grid-area: q;
+}
+#decimal {
+  grid-area: r;
+}
