@@ -106,24 +106,39 @@ const Calc = () => {
         5
       </div>
 
-      <div className={"button"} id={"six"} value-str={"6"} onClick={valueHandler}>
+      <div
+        className={"button"}
+        id={"six"}
+        value-str={"6"}
+        onClick={valueHandler}
+      >
         6
       </div>
 
       <div
         className={"button"}
-        id={"addition"}
+        id={"add"}
         value-str={"+"}
         onClick={valueHandler}
       >
         +
       </div>
 
-      <div className={"button"} id={"one"} value-str={"1"} onClick={valueHandler}>
+      <div
+        className={"button"}
+        id={"one"}
+        value-str={"1"}
+        onClick={valueHandler}
+      >
         1
       </div>
 
-      <div className={"button"} id={"two"} value-str={"2"} onClick={valueHandler}>
+      <div
+        className={"button"}
+        id={"two"}
+        value-str={"2"}
+        onClick={valueHandler}
+      >
         2
       </div>
 

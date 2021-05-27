@@ -1,0 +1,11 @@
+body {
+  background: #596c81;
+}
+
+#watermark {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}

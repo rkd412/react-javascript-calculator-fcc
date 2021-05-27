@@ -1,5 +1,9 @@
+
+
 .container {
-  background: blue;
+  background: #00328d;
+  border: 5px solid #0c4294;
+  border-radius: 5px 5px 10px 10px;
   width: 800px;
   height: 800px;
   display: grid;
@@ -12,64 +16,133 @@
     "i j k l"
     "m n o p"
     "q q r p";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
 }
 
 .button {
-  background: red;
-  border: 5px solid green;
+  border: 5px solid #0c4294;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+  font-size: 36px;
+  cursor: pointer;
 }
 
 #display {
   grid-area: a;
+  background: #abcbc8;
+  border: 5px solid #0c4294;
+  border-radius: 2px;
+  margin: 25px;
+  text-align: right;
+  font-size: 58px;
+  overflow: hidden;
 }
+
 #clear {
   grid-area: b;
+  background: #de4b4a;
+  color: #f2f3f7;
 }
+
 #divide {
   grid-area: c;
+  background: #de4b4a;
+  color: #f2f3f7;
 }
+
 #multiply {
   grid-area: d;
+  background: #de4b4a;
+  color: #f2f3f7;
 }
+
 #seven {
   grid-area: e;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #eight {
   grid-area: f;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #nine {
   grid-area: g;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #subtract {
   grid-area: h;
+  background: #de4b4a;
+  color: #f2f3f7;
 }
+
 #four {
   grid-area: i;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #five {
   grid-area: j;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #six {
   grid-area: k;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #add {
   grid-area: l;
+  background: #de4b4a;
+  color: #f2f3f7;
 }
+
 #one {
   grid-area: m;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #two {
   grid-area: n;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #three {
   grid-area: o;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #equals {
   grid-area: p;
+  background: #de4b4a;
+  color: #f2f3f7;
 }
+
 #zero {
   grid-area: q;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
 #decimal {
   grid-area: r;
+  background: #f2f3f7;
+  color: #0c4294;
 }
+
+

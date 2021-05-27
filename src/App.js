@@ -5,6 +5,9 @@ function App() {
   return (
     <div>
       <Calc />
+      <div id="watermark">
+        <p>Made by RKD412</p>
+      </div>
     </div>
   );
 }
