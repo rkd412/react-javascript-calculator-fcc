@@ -1,11 +1,7 @@
-
-
 .container {
   background: #00328d;
   border: 5px solid #0c4294;
   border-radius: 5px 5px 10px 10px;
-  width: 800px;
-  height: 800px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -23,30 +19,13 @@
   user-select: none;
 }
 
-.button {
-  border: 5px solid #0c4294;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 15px;
-  font-size: 36px;
-  cursor: pointer;
-}
-
-#display {
-  grid-area: a;
-  background: #abcbc8;
-  border: 5px solid #0c4294;
-  border-radius: 2px;
-  margin: 25px;
-  text-align: right;
-  font-size: 58px;
-  overflow: hidden;
-}
-
 #clear {
   grid-area: b;
   background: #de4b4a;
   color: #f2f3f7;
+}
+#clear:hover {
+  background-color: #04aa6d;
 }
 
 #divide {
@@ -54,11 +33,17 @@
   background: #de4b4a;
   color: #f2f3f7;
 }
+#divide:hover {
+  background-color: #04aa6d;
+}
 
 #multiply {
   grid-area: d;
   background: #de4b4a;
   color: #f2f3f7;
+}
+#multiply:hover {
+  background-color: #04aa6d;
 }
 
 #seven {
@@ -66,11 +51,19 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#seven:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #eight {
   grid-area: f;
   background: #f2f3f7;
   color: #0c4294;
+}
+#eight:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
 }
 
 #nine {
@@ -78,11 +71,18 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#nine:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #subtract {
   grid-area: h;
   background: #de4b4a;
   color: #f2f3f7;
+}
+#subtract:hover {
+  background-color: #04aa6d;
 }
 
 #four {
@@ -90,11 +90,19 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#four:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #five {
   grid-area: j;
   background: #f2f3f7;
   color: #0c4294;
+}
+#five:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
 }
 
 #six {
@@ -102,11 +110,18 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#six:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #add {
   grid-area: l;
   background: #de4b4a;
   color: #f2f3f7;
+}
+#add:hover {
+  background-color: #04aa6d;
 }
 
 #one {
@@ -114,11 +129,19 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#one:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #two {
   grid-area: n;
   background: #f2f3f7;
   color: #0c4294;
+}
+#two:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
 }
 
 #three {
@@ -126,11 +149,18 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#three:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #equals {
   grid-area: p;
   background: #de4b4a;
   color: #f2f3f7;
+}
+#equals:hover {
+  background-color: #04aa6d;
 }
 
 #zero {
@@ -138,11 +168,68 @@
   background: #f2f3f7;
   color: #0c4294;
 }
+#zero:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
 #decimal {
   grid-area: r;
   background: #f2f3f7;
   color: #0c4294;
 }
+#decimal:hover {
+  background-color: #04aa6d;
+  color: #f2f3f7;
+}
 
+@media screen and (max-width: 800px) {
+  .container {
+    width: 250px;
+    height: 400px;
+  }
+  .button {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #0c4294;
+    border-radius: 1px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  #display {
+    grid-area: a;
+    background: #abcbc8;
+    border: 5px solid #0c4294;
+    border-radius: 2px;
+    margin: 10px;
+    text-align: right;
+    font-size: 20px;
+    overflow: hidden;
+  }
+}
 
+@media screen and (min-width: 800px) {
+  .container {
+    width: 500px;
+    height: 800px;
+  }
+  .button {
+    border: 5px solid #0c4294;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+    font-size: 38px;
+    cursor: pointer;
+  }
+  #display {
+    grid-area: a;
+    background: #abcbc8;
+    border: 5px solid #0c4294;
+    border-radius: 2px;
+    margin: 25px;
+    text-align: right;
+    font-size: 58px;
+    overflow: hidden;
+  }
+}
