@@ -1,28 +1,45 @@
-import "./Calc.css";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import styles from "./Calc.css";
 
 const Calc = () => {
   const [value, setValue] = useState("");
+  const [active, setActive] = useState(false);
+  const [decimal, setIsDecimal] = useState(false);
 
-  const valueHandler = (e) => {
-    setValue(value + e.currentTarget.getAttribute("value-str"));
-    console.log(typeof value);
+  const filteredVal = value.toString().replace(/^0{2}/, "");
+
+  const operandHandler = (e) => {
+    setActive(true);
+    setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
+  };
+
+  const operatorHandler = (e) => {
+    setActive(true);
+    setIsDecimal(false);
+    setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
+  };
+
+  const decimalHandler = (e) => {
+    setActive(true);
+    if (!decimal) {
+      setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
+    }
+    setIsDecimal(true);
   };
 
   const valueClear = () => {
+    setActive(false);
     setValue("");
-    console.log(value);
   };
 
   const valueYield = () => {
-    setValue(eval(value));
-    console.log(value);
+    setValue(eval(filteredVal));
   };
 
   return (
     <div className={"container"} id={"calc"}>
       <div className={"display"} id={"display"}>
-        {value}
+        {active ? value : "0"}
       </div>
 
       <div
@@ -38,7 +55,7 @@ const Calc = () => {
         className={"button"}
         id={"divide"}
         value-str={"/"}
-        onClick={valueHandler}
+        onClick={operatorHandler}
       >
         /
       </div>
@@ -47,7 +64,7 @@ const Calc = () => {
         className={"button"}
         id={"multiply"}
         value-str={"*"}
-        onClick={valueHandler}
+        onClick={operatorHandler}
       >
         x
       </div>
@@ -56,7 +73,7 @@ const Calc = () => {
         className={"button"}
         id={"seven"}
         value-str={"7"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         7
       </div>
@@ -65,7 +82,7 @@ const Calc = () => {
         className={"button"}
         id={"eight"}
         value-str={"8"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         8
       </div>
@@ -74,7 +91,7 @@ const Calc = () => {
         className={"button"}
         id={"nine"}
         value-str={"9"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         9
       </div>
@@ -83,7 +100,7 @@ const Calc = () => {
         className={"button"}
         id={"subtract"}
         value-str={"-"}
-        onClick={valueHandler}
+        onClick={operatorHandler}
       >
         -
       </div>
@@ -92,7 +109,7 @@ const Calc = () => {
         className={"button"}
         id={"four"}
         value-str={"4"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         4
       </div>
@@ -101,7 +118,7 @@ const Calc = () => {
         className={"button"}
         id={"five"}
         value-str={"5"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         5
       </div>
@@ -110,7 +127,7 @@ const Calc = () => {
         className={"button"}
         id={"six"}
         value-str={"6"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         6
       </div>
@@ -119,7 +136,7 @@ const Calc = () => {
         className={"button"}
         id={"add"}
         value-str={"+"}
-        onClick={valueHandler}
+        onClick={operatorHandler}
       >
         +
       </div>
@@ -128,7 +145,7 @@ const Calc = () => {
         className={"button"}
         id={"one"}
         value-str={"1"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         1
       </div>
@@ -137,7 +154,7 @@ const Calc = () => {
         className={"button"}
         id={"two"}
         value-str={"2"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         2
       </div>
@@ -146,7 +163,7 @@ const Calc = () => {
         className={"button"}
         id={"three"}
         value-str={"3"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         3
       </div>
@@ -164,7 +181,7 @@ const Calc = () => {
         className={"button"}
         id={"zero"}
         value-str={"0"}
-        onClick={valueHandler}
+        onClick={operandHandler}
       >
         0
       </div>
@@ -173,7 +190,7 @@ const Calc = () => {
         className={"button"}
         id={"decimal"}
         value-str={"."}
-        onClick={valueHandler}
+        onClick={decimalHandler}
       >
         .
       </div>
