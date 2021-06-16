@@ -1,34 +1,57 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Calc.css";
+import "./Calc.css";
 
 const Calc = () => {
   const [value, setValue] = useState("");
   const [active, setActive] = useState(false);
-  const [decimal, setIsDecimal] = useState(false);
+  const [isDecimal, setIsDecimal] = useState(false);
+  const [isOperator, setIsOperator] = useState(false);
 
   const filteredVal = value.toString().replace(/^0{2}/, "");
 
+  useEffect(() => {
+    console.log("Working");
+  });
+
   const operandHandler = (e) => {
     setActive(true);
+    setIsOperator(false);
     setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
   };
 
   const operatorHandler = (e) => {
-    setActive(true);
-    setIsDecimal(false);
+    if (!isOperator) {
+      setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
+      setActive(true);
+      setIsOperator(true);
+      setIsDecimal(false);
+    } else {
+      setValue(
+        filteredVal.slice(0, -1) + e.currentTarget.getAttribute("value-str")
+      );
+      setActive(true);
+      setIsDecimal(false);
+    }
+  };
+
+  const minusHandler = (e) => {
     setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
+    setActive(true);
+    setIsOperator(true);
+    setIsDecimal(false);
   };
 
   const decimalHandler = (e) => {
     setActive(true);
-    if (!decimal) {
-      setValue(filteredVal + e.currentTarget.getAttribute("value-str"));
+    if (!isDecimal) {
+      setValue(filteredVal + ".");
+      setIsDecimal(true);
     }
-    setIsDecimal(true);
   };
 
   const valueClear = () => {
     setActive(false);
+    setIsDecimal(false);
     setValue("");
   };
 
@@ -100,7 +123,7 @@ const Calc = () => {
         className={"button"}
         id={"subtract"}
         value-str={"-"}
-        onClick={operatorHandler}
+        onClick={minusHandler}
       >
         -
       </div>
